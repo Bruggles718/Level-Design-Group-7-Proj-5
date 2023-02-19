@@ -51,7 +51,7 @@ public class InvisibilityBehavior : MonoBehaviour
         {
             if (currentInvis < 100)
             {
-                currentInvis += pickupAmount;
+                currentInvis = Mathf.Max(100, currentInvis + pickupAmount);
                 InvisSlider.value = currentInvis;
             }
         }

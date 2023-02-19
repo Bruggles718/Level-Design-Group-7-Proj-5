@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 597394876}
   - component: {fileID: 597394875}
   - component: {fileID: 597394879}
+  - component: {fileID: 597394880}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -236,8 +237,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InvisSlider: {fileID: 1870647434}
   pickupTag: Battery
-  pickupAmount: 100
+  pickupAmount: 20
   lossAmount: 10
+--- !u!54 &597394880
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597394874}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &619518125
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +437,7 @@ GameObject:
   - component: {fileID: 734146280}
   - component: {fileID: 734146279}
   - component: {fileID: 734146278}
+  - component: {fileID: 734146282}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Battery
@@ -505,6 +523,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &734146282
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734146277}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &741911536
 GameObject:
   m_ObjectHideFlags: 0
