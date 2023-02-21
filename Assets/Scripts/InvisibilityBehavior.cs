@@ -12,6 +12,7 @@ public class InvisibilityBehavior : MonoBehaviour
     public int pickupAmount;
     public int lossAmount;
     public float lossTime = 1.25f;
+    public AudioClip pickupsfx;
     private int currentInvis;
     private float counter;
 
@@ -52,10 +53,11 @@ public class InvisibilityBehavior : MonoBehaviour
         {
             if (currentInvis < 100)
             {
+                AudioSource.PlayClipAtPoint(pickupsfx,  transform.position);
                 //Just some precautions
                 currentInvis = Mathf.Min(100, currentInvis + pickupAmount);
-                Debug.Log(currentInvis);
                 InvisSlider.value = currentInvis;
+                Destroy(other.gameObject, .1f);
             }
         }
     }
