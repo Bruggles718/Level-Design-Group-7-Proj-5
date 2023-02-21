@@ -11,6 +11,7 @@ public class InvisibilityBehavior : MonoBehaviour
     public string pickupTag;
     public int pickupAmount;
     public int lossAmount;
+    public float lossTime = 1.25f;
     private int currentInvis;
     private float counter;
 
@@ -25,8 +26,8 @@ public class InvisibilityBehavior : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (counter >= 1f) {
-            counter %= 1f;
+        if (counter >= lossTime && currentInvis >= 0) {
+            counter %= lossTime;
             //Debug.Log(currentInvis);
             currentInvis -= lossAmount;
             InvisSlider.value = currentInvis;
@@ -46,12 +47,14 @@ public class InvisibilityBehavior : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Here");
+       ;
         if (other.CompareTag(pickupTag))
         {
             if (currentInvis < 100)
             {
-                currentInvis = Mathf.Max(100, currentInvis + pickupAmount);
+                //Just some precautions
+                currentInvis = Mathf.Min(100, currentInvis + pickupAmount);
+                Debug.Log(currentInvis);
                 InvisSlider.value = currentInvis;
             }
         }
