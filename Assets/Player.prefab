@@ -933,4 +933,4 @@ MonoBehaviour:
   pickupAmount: 50
   lossAmount: 10
   lossTime: 1.25
-  pickupsfx: {fileID: 0}
+  pickupsfx: {fileID: 8300000, guid: 38594dfbbc6ee45be9a5638b3ae9ec4f, type: 3}
