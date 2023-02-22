@@ -228,7 +228,8 @@ public class PlayerController : MonoBehaviour
         #endregion
 
         #region GROUND DETECTION
-        if (Physics.Raycast(groundCheck.position, Vector3.down, _groundCheckDistance, groundLayer) && _touchingLevelGeom == true)
+        Debug.DrawRay(groundCheck.position, Vector3.down);
+        if (Physics.Raycast(groundCheck.position, Vector3.down, _groundCheckDistance, groundLayer))
         {
             isGrounded = true;
         }
