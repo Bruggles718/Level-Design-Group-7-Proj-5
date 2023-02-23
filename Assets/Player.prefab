@@ -836,7 +836,7 @@ MonoBehaviour:
   _wallJumpDistance: 0
   _doubleJumpPower: 0
   _bunnyHopWindow: 0
-  _groundCheckDistance: 0.3
+  _groundCheckDistance: 1.5
   _rampSlideSpeedThreshold: 0
   _topSpeed: 0
 --- !u!54 &7430931325648590762
